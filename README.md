@@ -49,7 +49,7 @@ $ git clone https://github.com/beagleboard/linux.git kernel
 $ cd kernel
 $ git checkout 3.14
 $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bb.org_defconfig
-$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 uImage LOADADDR=0x80008000
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 uImage dtbs LOADADDR=0x80008000
 $ croot
 ```
 
