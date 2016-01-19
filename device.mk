@@ -96,10 +96,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	camera.omap3
 
-# Include SGX if they exist: they won't on the first build
-ifneq ($(wildcard device/ti/beagleboneblack/sgx/system),)
-    $(call inherit-product, device/ti/beagleboneblack/device-sgx.mk)
-endif
-
 # Provides overrides to configure the Dalvik heap for a standard tablet device
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
