@@ -44,9 +44,8 @@ $ export PATH=$PATH:/opt/gcc-arm-linux/bin
 $ cd ~/aosp
 $ git clone https://github.com/u-boot/u-boot.git u-boot
 $ cd u-boot
-$ git checkout am335x-v2013.01.01
-$ make CROSS_COMPILE=arm-eabi- am335x_evm_config
-$ make CROSS_COMPILE=arm-eabi- 
+$ make CROSS_COMPILE=arm-linux-gnueabihf- am335x_boneblack_defconfig
+$ make CROSS_COMPILE=arm-linux-gnueabihf-
 ```
 #### Compile Linux Kernel
 ```
