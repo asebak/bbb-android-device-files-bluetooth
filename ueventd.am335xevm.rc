@@ -1,1 +1,2 @@
 /dev/video0         0666  root       root
+/dev/bus/usb/*      0660  root       bluetooth
