@@ -60,7 +60,11 @@ $ make CROSS_COMPILE=arm-eabi-
 ```
 ### Build the Android Kernel
 ```
-$ croot
-$ make -j10
+$ cd ~/aosp
+$ make -j8
 ```
-todo finish the rest
+
+### Create an SD Card
+```
+.~/aosp/device/ti/beagleboneblack/write_sdcard.sh
+```
