@@ -73,14 +73,14 @@ echo ""
 
 if [ $device == "mmcblk0" ]; then
     BOOT_PART=/dev/${device}p1
-    SYSTEM_PART=/dev/${device}p2
-    USER_PART=/dev/${device}p3
-    CACHE_PART=/dev/${device}p4
+    SYSTEM_PART=/dev/${device}p5
+    USER_PART=/dev/${device}p6
+    CACHE_PART=/dev/${device}p7
 else
     BOOT_PART=/dev/${device}1
-    SYSTEM_PART=/dev/${device}2
-    USER_PART=/dev/${device}3
-    CACHE_PART=/dev/${device}4
+    SYSTEM_PART=/dev/${device}5
+    USER_PART=/dev/${device}6
+    CACHE_PART=/dev/${device}7
 fi
 
 echo "Unmounting partitions on /dev/${device}"
