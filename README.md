@@ -66,5 +66,5 @@ $ make -j8
 
 ### Create an SD Card
 ```
-.~/aosp/device/ti/beagleboneblack/write_sdcard.sh
+.~/aosp/device/ti/beagleboneblack/sdcard.sh
 ```
