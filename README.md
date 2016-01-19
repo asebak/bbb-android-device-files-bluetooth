@@ -22,15 +22,6 @@ $ cd ti
 $ git clone https://github.com/asebak/bbb-android-device-files-bluetooth.git beagleboneblack
 ```
 
-#### Configure Build for AOSP
-```
-$ cd ~/aosp
-$ . build/envsetup.sh
-$ lunch
-```
-
-Select "beagleboneblack-bluetooth-eng"
-
 #### Setup ARM Compiler
 ```
 $ wget http://releases.linaro.org/14.04/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux.tar.xz
@@ -39,7 +30,9 @@ $ cd /opt/
 $ sudo mv gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/ gcc-arm-linux
 $ export PATH=$PATH:/opt/gcc-arm-linux/bin
 ```
-#### Compile U-Boot
+
+#### Compile U-Boot (Bootloader)
+
 ```
 $ cd ~/aosp
 $ git clone https://github.com/u-boot/u-boot.git u-boot
@@ -47,7 +40,9 @@ $ cd u-boot
 $ make CROSS_COMPILE=arm-linux-gnueabihf- am335x_boneblack_defconfig
 $ make CROSS_COMPILE=arm-linux-gnueabihf-
 ```
-#### Compile Linux Kernel
+
+#### Compile the Linux Kernel
+
 ```
 $ cd ~/aosp
 $ git clone https://github.com/beagleboard/linux.git kernel
@@ -57,13 +52,19 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bb.org_defconfig
 $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 uImage
 $ croot
 ```
-#### Compile Android Kernel
+
+
+#### Compile the Android Kernel
+
 ```
 $ cd ~/aosp
+$ source build/envsetup.sh
+$ lunch #Select beagleboneblack-bluetooth-eng
 $ make -j8
 ```
 
 #### Create an SD Card
+
 ```
-.~/aosp/device/ti/beagleboneblack/sdcard.sh
+./sdcard.sh
 ```
