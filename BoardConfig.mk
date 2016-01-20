@@ -27,7 +27,7 @@ TARGET_CPU_VARIANT := generic
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/ti/beaglebone/hardware/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/ti/beagleboneblack/hardware/bluetooth
 BLUETOOTH_HCI_USE_USB := true
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := true
