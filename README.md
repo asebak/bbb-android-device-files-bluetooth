@@ -11,7 +11,7 @@ $ chmod a+x ~/bin/repo
 $ mkdir ~/aosp
 $ cd aosp
 $ repo init -u https://android.googlesource.com/platform/manifest -b android-4.4.4_r1
-$ repo sync
+$ repo sync -c
 ```
 
 #### Get Android BSP for beaglebone black
