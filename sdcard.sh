@@ -73,14 +73,14 @@ echo ""
 
 if [ $device == "mmcblk0" ]; then
     BOOT_PART=/dev/${device}p1
-    SYSTEM_PART=/dev/${device}p5
-    USER_PART=/dev/${device}p6
-    CACHE_PART=/dev/${device}p7
+    SYSTEM_PART=/dev/${device}p2
+    USER_PART=/dev/${device}p3
+    CACHE_PART=/dev/${device}p4
 else
     BOOT_PART=/dev/${device}1
-    SYSTEM_PART=/dev/${device}5
-    USER_PART=/dev/${device}6
-    CACHE_PART=/dev/${device}7
+    SYSTEM_PART=/dev/${device}2
+    USER_PART=/dev/${device}3
+    CACHE_PART=/dev/${device}4
 fi
 
 echo "Unmounting partitions on /dev/${device}"
@@ -95,7 +95,7 @@ sleep 4
 sudo sfdisk -D -u M /dev/${device} << EOF
 0,32,0x0C,*
 ,512,,,
-,512,,,
+,4000,,,
 ,256,,,
 EOF
 if [ $? != 0 ]; then echo "ERROR"; exit; fi
