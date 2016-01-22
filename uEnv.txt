@@ -1,3 +1,6 @@
 bootargs=console=ttyO0,115200n8 androidboot.console=ttyO0 rootwait ro
 bootcmd=mmc rescan ; fatload mmc 0 82000000 uImage ; fatload mmc 0 83000000 uRamdisk ; bootm 82000000 83000000
 uenvcmd=boot
+g_ffs.idVendor=0x18d1
+g_ffs.idProduct=0x4e23
+g_ffs.iSerialNumber=BBBMODIFIED
