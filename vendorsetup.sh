@@ -1,1 +1,1 @@
-add_lunch_combo beagleboneblack-bluetooth-eng
+add_lunch_combo beagleboneblack-eng

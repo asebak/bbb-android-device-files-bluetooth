@@ -42,8 +42,8 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
 # Bluetooth configuration file
-#PRODUCT_COPY_FILES += \
-#    system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
+PRODUCT_COPY_FILES += \
+    system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
 
 PRODUCT_PROPERTY_OVERRIDES := \
        hwui.render_dirty_regions=false
